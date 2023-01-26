@@ -1,6 +1,9 @@
+import { Box } from '@mui/material';
 import React, { useState } from 'react';
 import './toggler.css'
 import { GrSun, GrMoon } from "react-icons/gr";
+import Home from './pages/Home';
+import About from './pages/About';
 function Toggler() {
   const [theme, setTheme] = useState('light');
   const [icon, setIcon] = useState(GrSun)
@@ -8,14 +11,6 @@ function Toggler() {
   const themeStyle = theme === 'light' ? { backgroundColor: 'white', color: 'black' } : { backgroundColor: 'black', color: 'white' };
   const handleChange = () => {
 
-    // if (theme === 'dark') {
-    //     setTheme('light');
-    //     setIcon(GrSun);
-    //   } else {
-    //     setTheme('dark');
-    //     setIcon(GrMoon);
-    //   }
-    //above code does the same thing, below one is easier to read and write
     setTheme(theme === 'dark' ? 'light' : 'dark');
     setIcon(theme === 'dark' ? GrSun : GrMoon);
     setColor(color === 'gold' ? 'rgb(80, 78, 78)' : 'gold');
@@ -25,15 +20,24 @@ function Toggler() {
   return (
 
     <div style={themeStyle}>
-      <div id="container">
+      <Box mt='0px' display="flex" justifyContent="flex-end" sx={{ mr: 2 }}>
         <i onClick={handleChange} style={{ backgroundColor: color }}>
           {icon}
         </i>
-      </div>
-      <div id='text'>
+
+      </Box>
+      <Box mt='20px' ml='40px' display="flex" justifyContent="flex-end" sx={{ mr: { sm: 5 } }}>
         Current theme: {theme}
-      </div>
-      <p>Portfolio</p>
+      </Box>
+      <Box
+        mt='20px' ml='40px'
+      >
+        <Home theme={theme} />
+        <About theme={theme} />
+      </Box>
+
+
+
 
     </div>
 
