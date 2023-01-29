@@ -11,6 +11,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import HomeIcon from '@mui/icons-material/Home';
 import InfoIcon from '@mui/icons-material/Info';
 import ContactMailIcon from '@mui/icons-material/ContactMail';
+import { Link } from 'react-router-dom';
 
 
 
@@ -69,9 +70,9 @@ function Navbar() {
                             >
 
                                 <Stack>
-                                    <MenuItem>< HomeIcon />&nbsp;<Typography textAlign="center" variant="h5">Home </Typography></MenuItem>
-                                    <MenuItem><InfoIcon />&nbsp;<Typography textAlign="center" variant="h5">About </Typography></MenuItem>
-                                    <MenuItem><ContactMailIcon />&nbsp;<Typography textAlign="center" variant="h5">Contact </Typography></MenuItem>
+                                    <MenuItem>< HomeIcon />&nbsp;<Typography textAlign="center" variant="h5"><Link to="/" style={{ color: 'Black', textDecoration: 'none' }}>Home</Link> </Typography></MenuItem>
+                                    <MenuItem><InfoIcon />&nbsp;<Typography textAlign="center" variant="h5"><Link to="/about" style={{ color: 'Black', textDecoration: 'none' }}>About </Link></Typography></MenuItem>
+                                    <MenuItem><ContactMailIcon />&nbsp;<Typography textAlign="center" variant="h5"><Link to='/contact' style={{ color: 'Black', textDecoration: 'none' }}>Contact </Link></Typography></MenuItem>
                                 </Stack>
                             </MenuItem>
 
@@ -108,9 +109,9 @@ function Navbar() {
 
                     </Box>
                     <Box sx={{ flexGrow: 0, display: { xs: 'none', md: 'flex', }, color: 'white' }} >
-                        <MenuItem ><Typography textAlign="center" variant="h5">Home </Typography></MenuItem>
-                        <MenuItem><Typography textAlign="center" variant="h5">About </Typography></MenuItem>
-                        <MenuItem><Typography textAlign="center" variant="h5">Contact </Typography></MenuItem>
+                        <MenuItem ><Typography textAlign="center" variant="h5"><Link to="/" style={{ color: 'white', textDecoration: 'none' }}>Home</Link> </Typography></MenuItem>
+                        <MenuItem><Typography textAlign="center" variant="h5"><Link to="/about" style={{ color: 'white', textDecoration: 'none' }}>About </Link> </Typography></MenuItem>
+                        <MenuItem><Typography textAlign="center" variant="h5"><Link to='/contact' style={{ color: 'white', textDecoration: 'none' }}>Contact </Link> </Typography></MenuItem>
 
                     </Box>
                 </Toolbar>
