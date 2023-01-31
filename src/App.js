@@ -7,8 +7,6 @@ import './app.css'
 
 function App() {
   return (
-
-
     <Box
       width='400'
       sx={{ width: { xl: '1488px' } }}
