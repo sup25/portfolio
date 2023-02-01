@@ -2,6 +2,7 @@ import { Box } from '@mui/material';
 import Navbar from './component/Navbar'
 import Toggler from "./Toggler";
 import './app.css'
+import Footer from './component/Footer';
 
 
 
@@ -14,6 +15,7 @@ function App() {
     >
       <Navbar />
       <Toggler />
+      <Footer />
 
 
     </Box>

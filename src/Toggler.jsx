@@ -4,6 +4,8 @@ import './toggler.css'
 import { GrSun, GrMoon } from "react-icons/gr";
 import Home from './pages/Home';
 import About from './pages/About';
+import Works from './pages/Works';
+import Contact from './pages/Contact';
 function Toggler() {
   const [theme, setTheme] = useState('light');
   const [icon, setIcon] = useState(GrSun)
@@ -32,8 +34,10 @@ function Toggler() {
       <Box
         mt='20px' ml='40px'
       >
-        <Home theme={theme} />
-        <About theme={theme} />
+        <Home />
+        <About />
+        <Works />
+        <Contact />
       </Box>
 
 
