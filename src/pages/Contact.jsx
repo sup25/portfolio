@@ -1,7 +1,7 @@
 import React from 'react'
 import TextField from '@mui/material/TextField';
 
-import { Box, Typography } from '@mui/material';
+import { Box, Button, Typography } from '@mui/material';
 import { Container } from '@mui/system';
 
 
@@ -10,7 +10,7 @@ const Contact = () => {
     return (
         <Container >
             <Box
-                sx={{ mt: { lg: '70px', xs: '70px' } }}
+                sx={{ mt: { lg: '70px', xs: '70px' }, pb: '50px' }}
 
             >
                 <Typography variant='h3' sx={{ fontWeight: 'bold', textAlign: 'center' }}>
@@ -61,6 +61,25 @@ const Contact = () => {
 
 
 
+                </Box>
+                <Box display="flex"
+                    justifyContent="center"
+                > <Button
+                    size="large"
+                    sx={{
+
+
+
+                        color: 'white',
+                        borderRadius: '50px',
+                        background: '#2E3B55',
+                        "&.MuiButtonBase-root": {
+
+                        },
+                        "&.MuiButtonBase-root:hover": {
+                            bgcolor: "#D4AF37"
+                        }
+                    }}>Submit</Button>
                 </Box>
 
 
