@@ -1,14 +1,20 @@
 import React from 'react'
 import TextField from '@mui/material/TextField';
 
-import { Box, Button, Typography } from '@mui/material';
+import { Box, Button, Typography, Alert } from '@mui/material';
 import { Container } from '@mui/system';
 
 
 
+const handleSubmit = (e) => {
+    e.preventDefault();
+
+
+}
+
 const Contact = () => {
     return (
-        <Container >
+        <Container id="contact" >
             <Box
                 sx={{ mt: { lg: '70px', xs: '70px' }, pb: '50px' }}
 
@@ -64,7 +70,8 @@ const Contact = () => {
                 </Box>
                 <Box display="flex"
                     justifyContent="center"
-                > <Button
+                > <Button type="submit"
+                    onClick={handleSubmit}
                     size="large"
                     sx={{
 
@@ -80,7 +87,10 @@ const Contact = () => {
                             bgcolor: "#D4AF37"
                         }
                     }}>Submit</Button>
+
                 </Box>
+
+
 
 
             </Box>

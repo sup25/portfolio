@@ -14,7 +14,7 @@ import { Container } from '@mui/system';
 
 const Works = () => {
     return (
-        <Container>
+        <Container id="works">
             <Box sx={{
                 mt: { lg: '70px', xs: '70px', justifyContent: 'space-between' }
 

@@ -70,9 +70,15 @@ function Navbar() {
                             >
 
                                 <Stack>
-                                    <MenuItem>< HomeIcon />&nbsp;<Typography textAlign="center" variant="h5"><Link to="/" style={{ color: 'Black', textDecoration: 'none' }}>Home</Link> </Typography></MenuItem>
-                                    <MenuItem><InfoIcon />&nbsp;<Typography textAlign="center" variant="h5"><Link to="/about" style={{ color: 'Black', textDecoration: 'none' }}>About </Link></Typography></MenuItem>
-                                    <MenuItem><ContactMailIcon />&nbsp;<Typography textAlign="center" variant="h5"><Link to='/contact' style={{ color: 'Black', textDecoration: 'none' }}>Contact </Link></Typography></MenuItem>
+                                    <MenuItem>< HomeIcon />&nbsp;<Typography textAlign="center" variant="h5">
+                                        <a href="/" style={{ color: 'Black', textDecoration: 'none' }}>Home</a>
+                                    </Typography></MenuItem>
+                                    <MenuItem><InfoIcon />&nbsp;<Typography textAlign="center" variant="h5">
+                                        <a href="#about" style={{ color: 'Black', textDecoration: 'none' }}>About </a >
+                                    </Typography></MenuItem>
+                                    <MenuItem><ContactMailIcon />&nbsp;<Typography textAlign="center" variant="h5">
+                                        <a href='#contact' style={{ color: 'Black', textDecoration: 'none' }}>Contact </a>
+                                    </Typography></MenuItem>
                                 </Stack>
                             </MenuItem>
 
@@ -98,20 +104,20 @@ function Navbar() {
 
                     <Box sx={{ flexGrow: 2, cursor: 'pointer', display: 'flex', justifyContent: 'flex-end' }}  >
                         <Tooltip title="Instagram" >
-                            <a href="https://www.instagram.com/_supgg/" target="_blank" style={{ color: 'white' }}> <InstagramIcon /></a>
+                            <a href="https://www.instagram.com/_supgg/" target="#blank" style={{ color: 'white' }}> <InstagramIcon /></a>
                         </Tooltip> &nbsp;
                         <Tooltip title="facebook" >
-                            <a href="https://www.facebook.com/suparna.adhikari.925/" target="_blank" style={{ color: 'white' }}>   <FacebookOutlinedIcon /></a>
+                            <a href="https://www.facebook.com/suparna.adhikari.925/" target="#blank" style={{ color: 'white' }}>   <FacebookOutlinedIcon /></a>
                         </Tooltip> &nbsp;
                         <Tooltip title="github" >
-                            <a href='https://github.com/sup25' target="_blank" style={{ color: 'white' }}>  <GitHubIcon /></a>
+                            <a href='https://github.com/sup25' target="#blank" style={{ color: 'white' }}>  <GitHubIcon /></a>
                         </Tooltip>
 
                     </Box>
                     <Box sx={{ flexGrow: 0, display: { xs: 'none', md: 'flex', }, color: 'white' }} >
-                        <MenuItem ><Typography textAlign="center" variant="h5"><Link to="/" style={{ color: 'white', textDecoration: 'none' }}>Home</Link> </Typography></MenuItem>
-                        <MenuItem><Typography textAlign="center" variant="h5"><Link to="/about" style={{ color: 'white', textDecoration: 'none' }}>About </Link> </Typography></MenuItem>
-                        <MenuItem><Typography textAlign="center" variant="h5"><Link to='/contact' style={{ color: 'white', textDecoration: 'none' }}>Contact </Link> </Typography></MenuItem>
+                        <MenuItem ><Typography textAlign="center" variant="h5"><a href="/" style={{ color: 'white', textDecoration: 'none' }}>Home</a> </Typography></MenuItem>
+                        <MenuItem><Typography textAlign="center" variant="h5"><a href="#about" style={{ color: 'white', textDecoration: 'none' }}>About </a > </Typography></MenuItem>
+                        <MenuItem><Typography textAlign="center" variant="h5"><a href='#contact' style={{ color: 'white', textDecoration: 'none' }}>Contact </a> </Typography></MenuItem>
 
                     </Box>
                 </Toolbar>

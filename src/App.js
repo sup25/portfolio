@@ -3,6 +3,7 @@ import Navbar from './component/Navbar'
 import Toggler from "./Toggler";
 import './app.css'
 import Footer from './component/Footer';
+import { Route, Routes } from 'react-router-dom';
 
 
 
@@ -14,6 +15,7 @@ function App() {
       m='auto'
     >
       <Navbar />
+
       <Toggler />
       <Footer />
 
@@ -25,3 +27,5 @@ function App() {
 }
 
 export default App;
+
+

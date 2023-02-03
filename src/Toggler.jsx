@@ -6,6 +6,8 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Works from './pages/Works';
 import Contact from './pages/Contact';
+import { Routes, Route } from 'react-router-dom';
+
 function Toggler() {
   const [theme, setTheme] = useState('light');
   const [icon, setIcon] = useState(GrSun)
@@ -22,7 +24,7 @@ function Toggler() {
   return (
 
     <div style={themeStyle}>
-      <Box mt='0px' display="flex" justifyContent="flex-end" sx={{ mr: 2 }}>
+      <Box mt='0px' display="flex" justifyContent="flex-end" sx={{ mr: 2, pt: '20px' }}>
         <i onClick={handleChange} style={{ backgroundColor: color }}>
           {icon}
         </i>
@@ -34,10 +36,16 @@ function Toggler() {
       <Box
         mt='20px' ml='40px'
       >
+
+
         <Home />
         <About />
+
+
+
         <Works />
         <Contact />
+
       </Box>
 
 

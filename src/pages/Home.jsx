@@ -24,7 +24,7 @@ const Home = () => {
                     I design digital <br /> crafts for clients.
 
                 </Typography>
-                <Button variant="contained" sx={{
+                <Button href="#works" variant="contained" sx={{
                     borderRadius: '50px', height: '60px', background: '#2E3B55', "&.MuiButtonBase-root:hover": {
                         bgcolor: "#D4AF37"
                     }, ml: '100px '

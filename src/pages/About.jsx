@@ -8,8 +8,8 @@ import graphic from "../crdimg/graphic.jpg";
 import { Container } from '@mui/system';
 const About = () => {
     return (
-        <Container>
-            <Box id="about"
+        <Container id="about">
+            <Box
                 sx={{
                     display: 'flex',
                     justifyContent: 'space-around',
