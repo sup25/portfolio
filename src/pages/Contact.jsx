@@ -1,18 +1,35 @@
-import React from 'react'
+import React, { useState } from 'react'
 import TextField from '@mui/material/TextField';
 
-import { Box, Button, Typography, Alert } from '@mui/material';
+import { Box, Button, Typography } from '@mui/material';
 import { Container } from '@mui/system';
 
+import Snackbar from '@mui/material/Snackbar';
+import MuiAlert from '@mui/material/Alert';
+const Alert = React.forwardRef(function Alert(props, ref) {
+    return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
+});
 
 
-const handleSubmit = (e) => {
-    e.preventDefault();
-
-
-}
 
 const Contact = () => {
+
+    const [open, setOpen] = useState(false);
+
+    const handleClick = () => {
+        setOpen(true);
+    };
+
+    const handleClose = (event, reason) => {
+        if (reason === 'clickaway') {
+            return;
+        }
+
+        setOpen(false);
+    };
+
+
+
     return (
         <Container id="contact" >
             <Box
@@ -71,7 +88,7 @@ const Contact = () => {
                 <Box display="flex"
                     justifyContent="center"
                 > <Button type="submit"
-                    onClick={handleSubmit}
+                    onClick={() => setOpen(true)}
                     size="large"
                     sx={{
 
@@ -87,6 +104,14 @@ const Contact = () => {
                             bgcolor: "#D4AF37"
                         }
                     }}>Submit</Button>
+                    <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
+                        <Alert onClose={handleClose} severity="success" sx={{ width: '100%' }}>
+                            This is a success message!
+                        </Alert>
+                    </Snackbar>
+
+
+
 
                 </Box>
 
