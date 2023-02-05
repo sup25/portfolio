@@ -10,14 +10,17 @@ const About = () => {
     return (
         <Container id="about">
             <Box
+
                 sx={{
-                    display: 'flex',
+                    display: { lg: 'flex', xs: 'block' },
+
                     justifyContent: 'space-around',
                     mt: { lg: '70px', xs: '70px' },
-                    ml: { sm: '50px' }
+
                 }}
+
             >
-                <Card sx={{ maxWidth: 500 }}>
+                <Card sx={{ maxWidth: 500, mb: { lg: '0', xs: '30px' } }} >
                     <CardActionArea>
                         <CardMedia
                             component="img"
@@ -25,6 +28,7 @@ const About = () => {
                             image={illu}
                             alt="illustration"
                         />
+
                         <CardContent>
 
                             <Typography gutterBottom variant="h5" >

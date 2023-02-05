@@ -6,28 +6,31 @@ const Home = () => {
     return (
         <Box sx={{
             display: 'flex',
-            mt: { lg: '70px', xs: '70px' },
-            ml: { sm: '50px' }
+            mt: { lg: '70px', xs: '5px' },
+            ml: { lg: '100px', xs: '0px' },
+            p: { lg: '25px' },
+            pl: { xs: '30px' }
+
 
 
         }}
 
             position='relative'
-            p='25px'
+
         >
 
             <Box sx={{}}>
                 <Typography sx={{ fontWeight: 'bold', fontSize: "14px" }}>
                     ILLUSTRATOR, GRAPHIC DESIGNER
                 </Typography>
-                <Typography sx={{ fontWeight: 'bold', fontSize: "72px" }}>
+                <Typography sx={{ fontWeight: 'bold', fontSize: { lg: "72px", xs: '60px' } }}>
                     I design digital <br /> crafts for clients.
 
                 </Typography>
                 <Button href="#works" variant="contained" sx={{
                     borderRadius: '50px', height: '60px', background: '#2E3B55', "&.MuiButtonBase-root:hover": {
                         bgcolor: "#D4AF37"
-                    }, ml: '100px '
+                    },
                 }}>Explore Work <KeyboardArrowRightIcon /> </Button>
             </Box>
 

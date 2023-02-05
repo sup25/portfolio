@@ -3,7 +3,7 @@ import Navbar from './component/Navbar'
 import Toggler from "./Toggler";
 import './app.css'
 import Footer from './component/Footer';
-import { Route, Routes } from 'react-router-dom';
+
 
 
 

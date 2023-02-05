@@ -5,27 +5,26 @@ import { Box, Button, Typography } from '@mui/material';
 import { Container } from '@mui/system';
 
 import Snackbar from '@mui/material/Snackbar';
-import MuiAlert from '@mui/material/Alert';
-const Alert = React.forwardRef(function Alert(props, ref) {
-    return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
-});
-
 
 
 const Contact = () => {
 
+    const [input1, setInput1] = useState("");
+    const [input2, setInput2] = useState("");
+    const [input3, setInput3] = useState("");
     const [open, setOpen] = useState(false);
+    const [error, setError] = useState("");
 
-    const handleClick = () => {
-        setOpen(true);
-    };
-
-    const handleClose = (event, reason) => {
-        if (reason === 'clickaway') {
-            return;
+    const handleSubmit = () => {
+        if (!input1 || !input2 || !input3) {
+            setError("All input fields cannot be empty.");
+        } else {
+            setError("");
+            setInput1("");
+            setInput2("");
+            setInput3("");
+            setOpen(true);
         }
-
-        setOpen(false);
     };
 
 
@@ -56,22 +55,32 @@ const Contact = () => {
 
                     autoComplete="off" >
                     <TextField fullWidth
+                        value={input1}
+                        onChange={(e) => setInput1(e.target.value)}
+
                         required
                         id="outlined-required"
                         label="Full Name"
 
 
-
                     />
 
 
+
                     <TextField fullWidth
+
+                        value={input2} onChange={(e) => setInput2(e.target.value)}
                         id="outlined-basic"
                         label="Email"
 
 
                     />
+
+
+
                     <TextField
+
+                        value={input3} onChange={(e) => setInput3(e.target.value)}
                         fullWidth
                         multiline
                         rows={5}
@@ -88,7 +97,7 @@ const Contact = () => {
                 <Box display="flex"
                     justifyContent="center"
                 > <Button type="submit"
-                    onClick={() => setOpen(true)}
+                    onClick={handleSubmit}
                     size="large"
                     sx={{
 
@@ -104,11 +113,13 @@ const Contact = () => {
                             bgcolor: "#D4AF37"
                         }
                     }}>Submit</Button>
-                    <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
-                        <Alert onClose={handleClose} severity="success" sx={{ width: '100%' }}>
-                            This is a success message!
-                        </Alert>
-                    </Snackbar>
+                    <Snackbar
+                        open={open}
+                        onClose={() => setOpen(false)}
+                        message="Success"
+
+                        autoHideDuration={3000}
+                    />
 
 
 
